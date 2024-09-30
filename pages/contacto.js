@@ -1,35 +1,37 @@
-document
-  .querySelector("form")
-  .addEventListener("submit", async function (event) {
-    event.preventDefault();
+const form = document.getElementById("contactForm");
 
-    const nombre = event.target.querySelector('input[type="text"]').value;
-    const email = event.target.querySelector('input[type="email"]').value;
-    const mensaje = event.target.querySelector("textarea").value;
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
 
-    const bodyData = {
-      to: email,
-      message: `Nombre: ${nombre}\nMensaje: ${mensaje}`,
-    };
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("text").value;
 
-    try {
-      const response = await fetch(
-        "https://apx.school/api/utils/email-to-student",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(bodyData),
-        }
-      );
+  const body = {
+    to: "lucacarena98@gmail.com",
+    message: `Nombre: ${name}\nEmail: ${email}\nMensaje: ${message}`,
+  };
 
-      if (response.ok) {
-        console.log("Correo enviado exitosamente");
-      } else {
-        console.error("Error al enviar el correo:", response.statusText);
+  try {
+    const response = await fetch(
+      "https://apx.school/api/utils/email-to-student",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
       }
-    } catch (error) {
-      console.error("Error de red:", error);
+    );
+
+    if (response.ok) {
+      alert("¡Mensaje enviado con éxito!");
+      form.reset();
+    } else {
+      alert("Error al enviar el mensaje. Intenta nuevamente.");
     }
-  });
+  } catch (error) {
+    console.error("Error:", error);
+    alert("Ocurrió un error al enviar el mensaje. Intenta nuevamente.");
+  }
+});
