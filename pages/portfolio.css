@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.portfolio {
+  padding: 6rem 1rem;
+  background-image: url("../images/doodle\ items.png");
+  background-color: #13171c;
+}
+
+.maletin {
+  display: none;
+}
+
+.tituloPortfolio {
+  color: white;
+}
+
+.tituloPortfolio2 {
+  color: #00adb5;
+}
+
+.principal_portfolio {
+  text-align: center;
+}
+
+.tituloPortfolio,
+.tituloPortfolio2 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.portfolio_info {
+  margin: 3rem 0rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.portfolio_card {
+  background-color: rgba(128, 128, 128, 0.23);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.portfolio_card a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.tituloPort {
+  font-size: 2rem;
+}
+
+.imagenPortfolio {
+  width: 260px;
+  height: 150px;
+}
+
+@media (min-width: 1024px) {
+  .principal_portfolio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    margin: 9rem 3rem;
+  }
+
+  .principal_portfolio div {
+    text-align: start;
+    width: 600px;
+  }
+
+  .tituloPortfolio,
+  .tituloPortfolio2 {
+    font-size: 6rem;
+  }
+
+  .maletin {
+    display: block;
+    width: 300px;
+    height: 300px;
+  }
+
+  .portfolio_info {
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .portfolio_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 360px;
+    height: 530px;
+  }
+}

@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.servicios {
+  padding: 6rem 1rem;
+  background-image: url("../images/doodle\ items.png");
+  background-color: #13171c;
+}
+
+.maletin {
+  display: none;
+}
+
+.tituloServicios {
+  color: white;
+}
+
+.tituloServicios2 {
+  color: #00adb5;
+}
+
+.principal_servicios {
+  text-align: center;
+}
+
+.tituloServicios,
+.tituloServicios2 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.servicios_info {
+  margin: 3rem 0rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.servicios_card {
+  background-color: rgba(128, 128, 128, 0.23);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.tituloSer {
+  font-size: 2rem;
+}
+
+.imagenSer {
+  width: 260px;
+  height: 150px;
+}
+
+@media (min-width: 1024px) {
+  .principal_servicios {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    margin: 9rem 3rem;
+  }
+
+  .principal_servicios div {
+    text-align: start;
+    width: 600px;
+  }
+
+  .tituloServicios,
+  .tituloServicios2 {
+    font-size: 6rem;
+  }
+
+  .maletin {
+    display: block;
+    width: 300px;
+    height: 300px;
+  }
+
+  .servicios_info {
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .servicios_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 360px;
+    height: 530px;
+  }
+}
